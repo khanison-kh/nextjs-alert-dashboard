@@ -28,3 +28,22 @@ export async function fetchAlerts(url: string): Promise<Alert[]> {
 
   return res.json();
 }
+
+export async function fetchAlert(url: string): Promise<Alert> {
+  const accessToken = await auth0.getAccessToken();
+  const token = accessToken.token;
+
+  const res = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    cache: 'no-store',
+  });
+
+  if (!res.ok) {
+    throw new Error(`Erreur HTTP ${res.status}`);
+  }
+
+  return res.json();
+}

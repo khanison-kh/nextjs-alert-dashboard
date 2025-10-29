@@ -18,9 +18,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen ">
         {user && <Header user={user}></Header>}
-        {children}
+        <main className="grow bg-gray-100">{children}</main>
         {<Footer />}
       </body>
     </html>

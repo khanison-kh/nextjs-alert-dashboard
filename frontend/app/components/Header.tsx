@@ -9,7 +9,7 @@ export default function Header({ user }: { user: User }) {
         {/* Logo & Navigation */}
         <div className="flex items-center gap-10">
           <Link href="/dashboard" className="text-xl font-bold text-blue-600">
-            Alert Dashboard
+            Alerts Dashboard
           </Link>
 
           <nav className="flex items-center gap-6 text-sm font-medium text-gray-700">
@@ -23,7 +23,7 @@ export default function Header({ user }: { user: User }) {
               href="/alerts"
               className="hover:text-blue-600 transition-colors"
             >
-              Alerts
+              Alertes
             </Link>
           </nav>
         </div>
