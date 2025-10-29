@@ -4,6 +4,8 @@ import { fr } from 'date-fns/locale/fr';
 import { redirect } from 'next/navigation';
 import { Alert } from './api';
 
+// Utility functions
+
 type graphData =
   | { month: string; count: number }
   | { subject: string; count: number };
@@ -15,6 +17,7 @@ export function countAlertsByMonth(alerts: Alert[]) {
     counts[month] = (counts[month] || 0) + 1;
   });
 
+  // Sort dates in chronological order
   return Object.entries(counts)
     .map(([month, count]) => ({ month, count }))
     .sort((a, b) => {

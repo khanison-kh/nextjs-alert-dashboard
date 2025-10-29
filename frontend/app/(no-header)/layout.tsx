@@ -1,8 +1,9 @@
 import '../globals.css';
 
 export const metadata = {
-  title: 'Alert Dashboard',
-  description: 'Tableau de bord de supervision des alertes',
+  title: 'Alerts Dashboard | Next.js + Auth0 + Express',
+  description:
+    'Application web full-stack sécurisée pour la visualisation d’alertes. Authentification via Auth0, graphique interactif et backend Express API protégée.',
 };
 
 export default async function RootLayout({

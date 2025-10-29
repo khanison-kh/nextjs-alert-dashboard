@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth0 } from './lib/auth0';
 
+// Intercepts all requests.
+// If an unauthenticated user attempts to access a protected route ("/dashboard" or "/alerts"),
+// they are redirected to login page.
 export async function middleware(request: NextRequest) {
   const authRes = await auth0.middleware(request);
 

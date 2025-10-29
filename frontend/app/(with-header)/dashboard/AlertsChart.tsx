@@ -17,8 +17,11 @@ import {
   YAxis,
 } from 'recharts';
 
+// Bar chart
 export default function AlertsChart({ alerts }: { alerts: Alert[] }) {
   const [xAxisFilter, setXAxisFilter] = useState<'month' | 'subject'>('month');
+  // Using useMemo to avoid re executing operations
+  // when changing filter
   const data = useMemo(() => {
     if (xAxisFilter === 'month') {
       return countAlertsByMonth(alerts);

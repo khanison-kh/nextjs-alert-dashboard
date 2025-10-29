@@ -6,7 +6,7 @@ import { fr } from 'date-fns/locale';
 
 import Link from 'next/link';
 
-export default async function Dashboard({
+export default async function AlertDetail({
   params,
 }: {
   params: Promise<{ alertId: string }>;
