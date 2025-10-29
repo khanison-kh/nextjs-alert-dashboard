@@ -9,9 +9,10 @@ Application full stack (Next.js + Express) conteneurisée, avec authentification
 - **Frontend** : Next.js v15 (TypeScript, TailwindCSS, Recharts)
 - **Backend** : Node.js + Express.js
 - **Auth** : Auth0 v4 (OAuth2)
-- **Containers** : Docker + docker-compose
+- **Containers** : Docker (docker-compose)
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC?logo=tailwindcss&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-5-blue?logo=express)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)
 ![Auth0](https://img.shields.io/badge/Auth0-OAuth2-orange?logo=auth0)
@@ -22,10 +23,9 @@ Application full stack (Next.js + Express) conteneurisée, avec authentification
 
    ```bash
    git clone https://github.com/khanison-kh/nextjs-alert-dashboard.git
-   cd nextjs-alert-dashboard
    ```
 
-2. Créer les fichiers `.env` (backend) et `.env.local` (frontend) à partir des fichiers `.example`.`
+2. Créer les fichiers `.env` (backend) et `.env.local` (frontend) à partir des fichiers `.example`.
 
 3. Exécuter la commande :
 
