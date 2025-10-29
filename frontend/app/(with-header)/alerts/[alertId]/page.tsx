@@ -13,7 +13,8 @@ export default async function Dashboard({
 }) {
   const { alertId } = await params;
 
-  const alert = await fetchAlert(`http://localhost:8080/alerts/${alertId}`);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  const alert = await fetchAlert(`${API_URL}/alerts/${alertId}`);
 
   if (!alert) {
     return (

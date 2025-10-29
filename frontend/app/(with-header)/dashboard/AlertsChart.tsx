@@ -52,14 +52,23 @@ export default function AlertsChart({ alerts }: { alerts: Alert[] }) {
           <XAxis dataKey={xAxisFilter} />
           <YAxis />
           <Tooltip />
-          <Bar
-            name={"Nombre d'alertes"}
-            dataKey="count"
-            fill="#3b82f6"
-            radius={[4, 4, 0, 0]}
-            onClick={(_, index) => handleBarClick(index, data)}
-            cursor="pointer"
-          />
+          {xAxisFilter === 'month' ? (
+            <Bar
+              name={"Nombre d'alertes"}
+              dataKey="count"
+              fill="#3b82f6"
+              radius={[4, 4, 0, 0]}
+              onClick={(_, index) => handleBarClick(index, data)}
+              cursor="pointer"
+            />
+          ) : (
+            <Bar
+              name={"Nombre d'alertes"}
+              dataKey="count"
+              fill="#3b82f6"
+              radius={[4, 4, 0, 0]}
+            />
+          )}
         </BarChart>
       </ResponsiveContainer>
     </div>

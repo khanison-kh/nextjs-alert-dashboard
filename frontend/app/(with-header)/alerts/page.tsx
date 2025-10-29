@@ -11,8 +11,10 @@ export default async function Alerts({
   searchParams: Promise<{ [month: string]: string }>;
 }) {
   const month = (await searchParams).month;
-  const baseUrl = 'http://localhost:8080/alerts';
-  const url = month ? `${baseUrl}?month=${encodeURIComponent(month)}` : baseUrl;
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  const url = month
+    ? `${API_URL}/alerts?month=${encodeURIComponent(month)}`
+    : `${API_URL}/alerts`;
 
   const alerts = await fetchAlerts(url);
 
